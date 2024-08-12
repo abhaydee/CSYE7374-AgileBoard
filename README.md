@@ -1,34 +1,35 @@
------------ CSYE 7374 FINAL PROJECT ------------
+-----CSYE 7374 FINAL PROJECT---------
 
 
-Operating Instructions:
-• This is a Command Line Application hence all inputs and outputs are from and to the console. No graphical user interface is implemented.
-• User Interface is menu-driven, please refer to the options given to the user some options to move to the next step or to go back.
+GUIDELINES & Operating Instructions:
 
-A. Account has:
-• role: Enumeration of TeamLeader / TeamMember.
-• id: Int
-• username: String.
-• password: String.
-• displayName: String. 
+This project is implemented as a Command Line Interface (CLI) application, meaning all interactions occur via the console with text-based input and output. No graphical user interface (GUI) is provided.
+The user interface is structured as a menu-driven system. Follow the provided options to proceed to the next step or navigate back.
+A. Account Structure:
 
-B. Task has the following properties:
-• description: String.
-• status: Enumeration of TODO/DOING/DONE.
-• id: Int.
-• assignedMember: Whatever type you select.
+Role: An enumeration representing either a TeamLeader or TeamMember.
+ID: Integer value that uniquely identifies an account.
+Username: String that serves as the account identifier.
+Password: String used for authentication.
+DisplayName: A string that holds the name displayed for the user.
+B. Task Structure:
 
-C. Team leader is able to:
-• Create Task.
-• Update Task (update property: description & assignedMember).
-• View Tasks.
-• Delete Task.
+Description: A string providing details about the task.
+Status: An enumeration with possible values: TODO, DOING, DONE.
+ID: Integer value that uniquely identifies a task.
+AssignedMember: The type of this field depends on your implementation.
+C. Capabilities of a Team Leader:
 
-D. Team member is able to:
-• View Tasks that are assigned to him.
-• Update Task (update property: status).
+Create new tasks.
+Update existing tasks (including modifying the description and reassigning the member responsible).
+View all tasks.
+Delete tasks.
+D. Capabilities of a Team Member:
 
-Edge Cases Covered:
-• When a member has >= 2 DOING tasks, this member should not be assigned new tasks.
-• When a task is in DOING status, it should not be deleted or assigned to a new member.
-• When a task is in DONE status, it should not be assigned to a new member.
+View tasks specifically assigned to them.
+Update the status of their tasks.
+Edge Cases Considered:
+
+If a team member already has two or more tasks marked as DOING, they cannot be assigned additional tasks.
+Tasks marked as DOING cannot be deleted or reassigned to another member.
+Tasks marked as DONE cannot be reassigned to a different member.
